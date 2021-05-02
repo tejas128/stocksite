@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import "./App.css"
+import Compare from './pages/compare/Compare';
+import Home from './pages/home/Home';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Navbar from './Component/navbar/Navbar';
+
+export const AppContext = React.createContext();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [tickerName, settickerName] = useState("AAPL")
+    const [tickerName2, settickerName2] = useState("AAPL")
+    const [tickers, setTickers] = useState([])
+    useEffect(() => {
+        fetch("https://api.polygon.io/v2/reference/tickers?sort=ticker&perpage=50&page=1&apiKey=jf4mJNhusRMdBeXvgNBliaV_gnNRk2bn").then(res => res.json()).then(data => {
+            console.log(data.tickers)
+            setTickers(data.tickers)
+        })
+    }, [])
+    return (
+        <>
+            <Router>
+                
+                <AppContext.Provider value={{ tickerName, settickerName, tickerName2, settickerName2, tickers, setTickers }}>
+                    <Switch>
+                        <Route path="/" exact>
+                           <Home/>
+                        </Route>
+                        <Route path="/compare">
+                            <Compare/>
+                        </Route>
+                    </Switch>
+
+                </AppContext.Provider>
+            </Router>
+
+
+        </>
+    )
 }
 
-export default App;
+export default App

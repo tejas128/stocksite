@@ -1,0 +1,39 @@
+.top-nav{
+    display: none;
+    background-color:  rgb(230, 132, 148);
+    
+ }
+ .top-nav-wrapper{
+    padding:10px;
+   display: flex;
+   justify-content: flex-end;
+   
+ }
+ .topnavitemsContainer{
+     list-style: none;
+     margin: 0px;
+ }
+ .active{
+    color:rgb(138, 138, 189);
+}
+a:hover{
+    color:rgb(138, 138, 189);
+}
+ .topNavContainer{
+     display: flex;
+     padding: 10px;
+     justify-content: center;
+     background-color: rgb(37, 37, 53)}
+ .topnavItem{
+     height: 50px;
+ 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ @media(max-width:1102px){
+     .top-nav{
+         display: block;
+     }
+ }
+
