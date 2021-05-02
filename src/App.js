@@ -19,7 +19,8 @@ function App() {
     }, [])
     return (
         <>
-            <Router>
+        <Home/>
+            {/*<Router>
                 
                 <AppContext.Provider value={{ tickerName, settickerName, tickerName2, settickerName2, tickers, setTickers }}>
                     <Switch>
@@ -33,7 +34,7 @@ function App() {
 
                 </AppContext.Provider>
             </Router>
-
+     */}
 
         </>
     )
