@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import "./App.css"
 import Compare from './pages/compare/Compare';
 import Home from './pages/home/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import Navbar from './Component/navbar/Navbar';
 
 export const AppContext = React.createContext();
@@ -19,8 +19,8 @@ function App() {
     }, [])
     return (
         <>
-        <Home/>
-            {/*<Router>
+     
+            <Router>
                 
                 <AppContext.Provider value={{ tickerName, settickerName, tickerName2, settickerName2, tickers, setTickers }}>
                     <Switch>
@@ -34,7 +34,7 @@ function App() {
 
                 </AppContext.Provider>
             </Router>
-     */}
+   
 
         </>
     )

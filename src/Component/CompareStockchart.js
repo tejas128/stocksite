@@ -10,11 +10,9 @@ function CompareStockchart({stocks,stocks2}) {
 
     const options = {
         title: {
-            text: 'Series compare by <em>percent</em>'
+            text: 'Stocks compare by <em>percent</em>'
         },
-        subtitle: {
-            text: 'Compare the values of the series against the first value in the visible range'
-        },
+      
 
         rangeSelector: {
             selected: 4

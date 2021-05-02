@@ -57,7 +57,7 @@ function Compare() {
                 <Navbar />
             </div>
             <div className="  col-lg-9 ">
-                <div className="container " style={{marginTop:"150px"}}>
+                <div className="container " >
                     <div className='container'>
                         <h4 style={{marginBottom:"30px"}}>Compare Stocks:</h4>
                         <div className="row">
