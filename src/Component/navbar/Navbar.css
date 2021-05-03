@@ -14,7 +14,8 @@ a:hover{
 
 .sidenav{
    display: block;
- 
+     position: fixed;
+     width: 25%;
     height: 100vh;
     box-shadow: 2px 1px 4px -4px rgba(0,0,0,0.75);
     

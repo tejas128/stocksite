@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import { AppContext } from '../../App'
 import CompareStockchart from '../../Component/CompareStockchart'
 import Navbar from '../../Component/navbar/Navbar'
+import Tabular from '../../Component/tabular/Tabular'
 import TopNav from '../../Component/top-nav/TopNav'
 import "./Compare.css"
 function Compare() {
@@ -52,7 +53,7 @@ function Compare() {
     return (
         <>
         <TopNav/>
-        <div className=" row  ">
+        <div className=" row compare " >
             <div className="col-lg-3">
                 <Navbar />
             </div>
@@ -77,7 +78,7 @@ function Compare() {
                                 </select>
                             </div>
                             <div className='col-sm-6'>
-                            <label className="mb-3" >stock2:</label>
+                            <label className="mb-3" >Stock2:</label>
                                 <select className="form-select" onChange={(e) => {
 
                                     settickerName2(e.target.value)
@@ -96,6 +97,8 @@ function Compare() {
                         <CompareStockchart stocks={stocks} stocks2={stocks2} />
 
                     </div>
+                    
+                    <Tabular/>
                 </div>
 
             </div>

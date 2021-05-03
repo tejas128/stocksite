@@ -9,16 +9,19 @@ import { NavLink } from 'react-router-dom'
 import TopNav from '../../Component/top-nav/TopNav'
 function Home() {
     return (<>
-        <TopNav/>
+        <TopNav />
         <div className="home row  ">
             <div className="col-lg-3 home-left">
                 <Navbar />
             </div>
             <div className="  col-lg-9 ">
                 <div className="container">
-                    <h1 className="homepagetopText">Stocks</h1>
-                    <Picker />
-                    <Stockchart />
+                    <div className="container">
+                        <h1 className="homepagetopText">Stocks</h1>
+                        <Picker />
+                        <Stockchart />
+                    </div>
+
                 </div>
 
             </div>
